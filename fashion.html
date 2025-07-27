@@ -66,7 +66,7 @@
       <img id="modalImg" src="" class="w-full h-96 object-cover">
       <div class="p-4">
         <div id="modalPrice" class="text-[#5a3a22] font-semibold text-lg mb-1">PKR</div>
-        <div id="modalDescription" class="text-sm text-gray-600 mb-3">Soft fleece inner lining, smooth exterior, and stitched to perfection. Perfect for winter wear with a modern cut.</div>
+        <div id="modalDescription" class="text-sm text-gray-600 mb-3">Personal Designing Available - So Place Your Order Now</div>
         <div class="flex justify-between items-center">
           <a href="https://wa.me/923182155044" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Order Now</a>
           <button onclick="addToCart()" class="bg-[#5a3a22] text-white px-4 py-2 rounded hover:bg-[#7a5433]">Add to Cart</button>
@@ -93,29 +93,16 @@
     let selectedCard = null;
 
     const hoodieData = [
-      { img: 'images/hoodie1.jpeg', price: 'PKR 2,999', name: 'Classic Mist' },
-      { img: 'images/hoodie2.jpeg', price: 'PKR 3,199', name: 'Winter Ash' },
-      { img: 'images/hoodie3.jpeg', price: 'PKR 2,849', name: 'Snow Drift' },
-      { img: 'images/hoodie4.jpeg', price: 'PKR 3,499', name: 'Coffee Haze' },
-      { img: 'images/hoodie5.jpeg', price: 'PKR 2,750', name: 'Moon Frost' },
-      { img: 'images/hoodie6.jpeg', price: 'PKR 3,100', name: 'Smoky Brown' },
-      { img: 'images/hoodie7.jpeg', price: 'PKR 3,250', name: 'Wool Crest' },
-      { img: 'images/hoodie8.jpeg', price: 'PKR 2,980', name: 'Oak Chill' },
-      { img: 'images/hoodie9.jpeg', price: 'PKR 2,800', name: 'Almond Cream' },
-      { img: 'images/hoodie10.jpeg', price: 'PKR 3,050', name: 'Dune Shade' },
-      { img: 'images/hoodie11.jpeg', price: 'PKR 3,000', name: 'Dust Cloud' },
-      { img: 'images/hoodie12.jpeg', price: 'PKR 2,950', name: 'Urban Rust' },
-      { img: 'images/hoodie13.jpeg', price: 'PKR 2,899', name: 'Frost Oak' },
-      { img: 'images/hoodie14.jpeg', price: 'PKR 3,199', name: 'Earth Drift' },
-      { img: 'images/hoodie15.jpeg', price: 'PKR 3,050', name: 'Stone Cream' },
-      { img: 'images/hoodie16.jpeg', price: 'PKR 2,999', name: 'Sahara Blend' },
-      { img: 'images/hoodie17.jpeg', price: 'PKR 3,200', name: 'Silk Amber' },
-      { img: 'images/hoodie18.jpeg', price: 'PKR 2,850', name: 'Maple Fade' },
-      { img: 'images/hoodie19.jpeg', price: 'PKR 3,000', name: 'Wood Smoke' },
-      { img: 'images/hoodie20.jpeg', price: 'PKR 2,970', name: 'Dusty Fern' },
-      { img: 'images/hoodie21.jpeg', price: 'PKR 2,980', name: 'Fog Trail' },
-      { img: 'images/hoodie22.jpeg', price: 'PKR 3,220', name: 'Vintage Oak' }
-    ];
+      { img: 'fashionimage/fashion1.jpeg', price: 'PKR 1,599', name: 'Anjum Special' },
+      { img: 'fashionimage/fashion2.jpeg', price: 'PKR 1,599', name: 'Classic Shayan' },
+      { img: 'fashionimage/fashion3.jpeg', price: 'PKR 1,599', name: 'Aura Smash' },
+      { img: 'fashionimage/fashion4.jpeg', price: 'PKR 1,599', name: 'Cotton Blue' },
+      { img: 'fashionimage/fashion5.jpeg', price: 'PKR 1,599', name: 'Anjum Red Velvet' },
+      { img: 'fashionimage/fashion6.jpeg', price: 'PKR 1,599', name: 'Claasic Oliyan' },
+      { img: 'fashionimage/fashion7.jpeg', price: 'PKR 1,499', name: 'Cotton Black' },
+      { img: 'fashionimage/fashion8.jpeg', price: 'PKR 1,499', name: 'Cotton White' },
+
+  ]
 
     hoodieData.forEach(h => {
       const card = document.createElement('div');
