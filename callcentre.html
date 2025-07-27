@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SST Globals - Premium Call Center Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  a[href="sufimart.html"] img:hover {
+    transform: scale(8.8);
+  }
+</style>
+<style>
+    :root {
+      --primary: #0c2d57;
+      --secondary: #ff6600;
+      --light: #f7f7f7;
+      --dark: #333;
+      --accent: #43919B;
+      --text: #444;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), #1a4b8c);
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo h1 {
+      font-size: 1.8rem;
+      margin-left: 0.5rem;
+      background: linear-gradient(to right, #fff, #ddd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .logo-icon {
+      font-size: 2rem;
+      color: var(--secondary);
+    }
+    
+    /* Navigation */
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 2rem;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+    
+    nav ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b0c7c8a9-a837-4734-a379-bcda4b758d59.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      margin-top: 60px;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      color: white;
+      padding: 2rem;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    
+    /* Sections */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      display: inline-block;
+    }
+    
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Services */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    /* About */
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .about-text {
+      flex: 1;
+    }
+    
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Contact */
+    .contact {
+      background: linear-gradient(135deg, var(--primary), #1a4b8c);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact .section-title h2 {
+      color: white;
+    }
+    
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: var(--secondary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background: #e65c00;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+    }
+    
+    .btn-outline:hover {
+      background: var(--secondary);
+      color: white;
+    }
+    
+    /* Animation Classes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0 1rem;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+    
+    .footer-column h3 {
+      color: var(--secondary);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-column ul li a:hover {
+      color: var(--secondary);
+      padding-left: 5px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-links a {
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0 1rem;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--primary);
+        transition: all 0.3s ease;
+      }
+      
+      nav.active {
+        left: 0;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      
+      nav ul li {
+        margin: 1rem 0;
+      }
+      
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+      
+      .about-content {
+        flex-direction: column;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Utility Classes */
+    .text-center {
+      text-align: center;
+    }
+    
+    .mb-1 { margin-bottom: 1rem; }
+    .mb-2 { margin-bottom: 2rem; }
+    .mb-3 { margin-bottom: 3rem; }
+    
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+    .mt-3 { margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-headset logo-icon"></i>
+        <h1>SST Globals</h1>
+      </div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Premium Call Center Solutions for Your Business</h2>
+      <p>We provide professional inbound and outbound call center services with measurable results and exceptional customer experience.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+    
+    <div class="services-container">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-phone-volume"></i>
+        </div>
+        <h3>Inbound Support</h3>
+        <p>24/7 customer service, technical support, order processing, and more with highly trained agents.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3>Outbound Services</h3>
+        <p>Lead generation, market research, surveys, appointment setting, and telemarketing campaigns.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3>Live Chat & Email</h3>
+        <p>Multilingual live chat and email support for e-commerce and service-based businesses.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Virtual Assistance</h3>
+        <p>Professional virtual assistants to handle your administrative, creative and technical tasks.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Analytics & Reporting</h3>
+        <p>Comprehensive reporting with actionable insights to optimize your customer interactions.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Multilingual Support</h3>
+        <p>Native-language support for global markets in English, Spanish, French, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title">
+      <h2>About SST Globals</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <h3 class="mb-2">Your Trusted Call Center Partner</h3>
+        <p class="mb-2">SST Globals is a leading provider of premium call center services with a proven track record of delivering exceptional customer experiences. Since our founding in 2010, we've helped hundreds of businesses optimize their customer communication strategies.</p>
+        <p class="mb-2">Our team of highly trained professionals leverages cutting-edge technology and industry best practices to deliver measurable results for clients across various industries including healthcare, e-commerce, telecommunications, and financial services.</p>
+        <p>We operate multiple contact centers across different time zones to provide 24/7 support coverage for your customers wherever they are.</p>
+        <a href="#contact" class="btn mt-3">Contact Us</a>
+      </div>
+      
+      <div class="about-image">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/88daf928-19f4-419a-a19d-90fe3eec44ee.png" alt="Modern call center office with professional agents wearing headsets and working at computer stations" />
+      </div>
+    </div>
+  </section>
+ <!-- Connect With Us Section -->
+<section id="contact" style="background: #f1f5f9; padding: 6em 2em; text-align: center; color: #1e293b;">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <h2 style="font-size: 3em; margin-bottom: 0.5em;">Connect With Us</h2>
+    <p style="font-size: 1.2em; margin-bottom: 2em;">
+      Ready to collaborate or have questions? Reach out through your preferred platform below.
+    </p>
+
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5em; margin-top: 2em;">
+      <a href="mailto:sstglobals@sstglobals.com" 
+         style="display: inline-block; background-color: #ea4335; color: white; padding: 1em 2em; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1em;">
+        📧 Email Us
+      </a>
+
+      <a href="https://wa.me/923290799877" target="_blank" 
+         style="display: inline-block; background-color: #25D366; color: white; padding: 1em 2em; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1em;">
+        💬 WhatsApp Us
+      </a>
+    </div>
+
+    <p style="margin-top: 2.5em; font-size: 1em; color: #475569;">
+      Email: <strong>sstglobals@sstglobals.com</strong><br>
+      WhatsApp: <strong>+92 329 0799 877</strong>
+    </p>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>SST Globals</h3>
+        <p>Premium call center solutions for businesses looking to enhance customer experience and drive growth.</p>
+        <div class="social-links mt-2">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Inbound Support</a></li>
+          <li><a href="#">Outbound Services</a></li>
+          <li><a href="#">Live Chat & Email</a></li>
+          <li><a href="#">Virtual Assistance</a></li>
+          <li><a href="#">Multilingual Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Jameel House, 4th Floor, Clifton, Karachi, Pakistan</li>
+          <li><i class="fas fa-phone"></i> +92 (329) 0799 877</li>
+          <li><i class="fas fa-envelope"></i> callcentre@sstglobals.com</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 SST Globals. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    
+    // Smooth Scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        nav.classList.remove('active');
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const formResponse = document.getElementById('formResponse');
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          formResponse.style.display = 'block';
+          formResponse.innerHTML = '<div class="alert alert-success">Thank you! Your message has been sent successfully.</div>';
+          document.getElementById('contactForm').reset();
+        } else {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } catch (error) {
+        formResponse.style.display = 'block';
+        formResponse.innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
+
+
+<!-- Floating Logo for SufiMart -->
+<a href="sufimart.html" style="position: fixed; bottom: 60px; right: 60px; z-index: 9999;">
+  <img src="images/sufi.jpeg" alt="SufiMart" style="width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+</a>
+
+
+
+</body>
+</html>
+
+
